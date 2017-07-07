@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd"
+default-autowire="byName">
+
+    <!--扫描web相关的bean-->
+    <context:component-scan base-package="com.test.app.controller"/>
+
+    <!--开启SpringMVC注解模式-->
+    <mvc:annotation-driven/>
+
+    <!-- 静态资源的访问 -->
+    <mvc:default-servlet-handler/>
+
+    <!--&lt;!&ndash;避免IE执行AJAX时，返回JSON出现下载文件 &ndash;&gt;
+    <bean id="mappingJacksonHttpMessageConverter"
+          class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter">
+        <property name="supportedMediaTypes">
+            <list>
+                <value>text/html;charset=UTF-8</value>
+            </list>
+        </property>
+    </bean>
+
+    &lt;!&ndash; 启动SpringMVC的注解功能，完成请求和注解POJO的映射 &ndash;&gt;
+    <bean
+            class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
+        <property name="messageConverters">
+            <list>
+                <ref bean="mappingJacksonHttpMessageConverter" /> &lt;!&ndash; JSON转换器 &ndash;&gt;
+            </list>
+        </property>
+    </bean>-->
+    <!-- 定义跳转的文件的前后缀 ，视图模式配置-->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <!-- 这里的配置我的理解是自动给后面action的方法return的字符串加上前缀和后缀，变成一个 可用的url地址 -->
+        <property name="prefix" value="/WEB-INF/jsp/" />
+        <property name="suffix" value=".jsp" />
+    </bean>
+    
+    <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
+        <property name="messageConverters">
+            <list>
+                <bean class="org.springframework.http.converter.StringHttpMessageConverter">
+                    <property name="supportedMediaTypes">
+                        <list><value>text/plain;charset=UTF-8</value></list>
+                    </property>
+                </bean>
+            </list>
+        </property>
+    </bean>
+
+
+
+
+    <!--Lucene search config-->
+    <!--设置字段内容长度，这里不做限定-->
+    <!--<bean id="luceneAnalyzer" class="org.wltea.analyzer.lucene.IKAnalyzer"/>
+
+    <bean id="luceneDirectory" class="org.apache.lucene.store.SimpleFSDirectory">
+        <constructor-arg>
+            <bean class="java.io.File">
+                <constructor-arg value="C:\\index\\test" />
+            </bean>
+        </constructor-arg>
+    </bean>
+
+    <bean id="indexWriter" class="org.apache.lucene.index.IndexWriter">
+        <constructor-arg ref="luceneDirectory"/>
+        <constructor-arg ref="luceneAnalyzer"/>
+        <constructor-arg name="create" value="false"/>
+    </bean>
+
+    &lt;!&ndash; define the IndexSearcher ,这里创建IndexSearcher&ndash;&gt;
+    <bean id="indexSearcher" class="org.apache.lucene.search.IndexSearcher">
+        <constructor-arg ref="luceneDirectory" />
+    </bean>-->
+
+</beans>
