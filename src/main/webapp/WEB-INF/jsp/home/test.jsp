@@ -9,8 +9,10 @@
 </head>
 <body>
 
-<form id="haha" action="/book/create" method="post">
-    <input type="text" name="name" value="" placeholder="字段" />
+<%--<form id="haha" action="/book/create" method="post">--%>
+<form id="haha" action="/book/q" method="post">
+    <%--<input type="text" name="name" value="" placeholder="字段" />--%>
+    <input type="text" name="q" value="" placeholder="字段" />
     <input type="submit" value="提交">
 </form>
 

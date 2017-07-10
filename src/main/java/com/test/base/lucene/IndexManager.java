@@ -28,7 +28,6 @@ import java.util.List;
 public class IndexManager {
 
     public void createIndex(List<Book> list){
-
         /*IBookService bookService=new BookServiceImpl();
         List<Book> list= bookService.selectAllBook();*/
 
@@ -39,8 +38,8 @@ public class IndexManager {
             // store:如果是yes，则说明存储到文档域中
             Field id=new TextField("id",Integer.toString(book.getId()),Field.Store.YES);
             Field name=new TextField("name",book.getName(),Field.Store.YES);
-            Field price=new TextField("price", book.getPrice().toString(),Field.Store.YES);
-            Field pic=new TextField("pic",book.getPic(),Field.Store.YES);
+//            Field price=new TextField("price", book.getPrice().toString(),Field.Store.YES);
+//            Field pic=new TextField("pic",book.getPic(),Field.Store.YES);
             Field description=new TextField("description",book.getDescription(),Field.Store.YES);
 
             docList.add(document);
@@ -67,10 +66,9 @@ public class IndexManager {
             }
             //关闭writer
             writer.close();
-
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
+
 }

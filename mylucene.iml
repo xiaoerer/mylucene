@@ -50,12 +50,15 @@
     <orderEntry type="library" name="Maven: org.springframework:spring-webmvc:4.3.5.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-test:4.3.5.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: javax.servlet:jstl:1.2" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.lucene:lucene-analyzers-common:6.6.0" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.lucene:lucene-analyzers-smartcn:6.6.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.lucene:lucene-core:6.6.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.lucene:lucene-queryparser:6.6.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.lucene:lucene-queries:6.6.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.lucene:lucene-sandbox:6.6.0" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.lucene:lucene-analyzers-common:6.6.0" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.lucene:lucene-analyzers-smartcn:6.6.0" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.lucene:lucene-highlighter:6.6.0" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.lucene:lucene-join:6.6.0" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.lucene:lucene-memory:6.6.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.tika:tika-core:1.5" level="project" />
     <orderEntry type="library" name="Maven: org.apache.tika:tika-parsers:1.5" level="project" />
     <orderEntry type="library" name="Maven: org.gagravarr:vorbis-java-tika:0.1" level="project" />
@@ -92,6 +95,5 @@
     <orderEntry type="library" name="Maven: org.gagravarr:vorbis-java-core:0.1" level="project" />
     <orderEntry type="library" name="Maven: com.googlecode.juniversalchardet:juniversalchardet:1.0.3" level="project" />
     <orderEntry type="library" name="Maven: com.uwyn:jhighlight:1.0" level="project" />
-    <orderEntry type="library" name="Maven: IKAnalyzer:IKAnalyzer:2012FF_hf1" level="project" />
   </component>
 </module>
